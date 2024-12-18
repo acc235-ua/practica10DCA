@@ -1,0 +1,11 @@
+vboxalvaro@Ubuntu-Personal:~/Escritorio/DCA/PRAC9$ git config --global alias.st status
+vboxalvaro@Ubuntu-Personal:~/Escritorio/DCA/PRAC9$ git st
+En la rama main
+Tu rama está actualizada con 'origin/main'.
+
+nada para hacer commit, el árbol de trabajo está limpio
+vboxalvaro@Ubuntu-Personal:~/Escritorio/DCA/PRAC9$ git config alias.co checkout
+vboxalvaro@Ubuntu-Personal:~/Escritorio/DCA/PRAC9$ git co
+Tu rama está actualizada con 'origin/main'.
+vboxalvaro@Ubuntu-Personal:~/Escritorio/DCA/PRAC9$ 
+
