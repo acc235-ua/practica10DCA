@@ -23,6 +23,13 @@ int main() {
 
     cout<<"Pensaré un número del 1 al 20 ,intenta adivinarlo"<< nombre << endl << Número: ;
     cin >> num;
+
+    if ( num == aleatorio){
+
+        cout<< "Enhorabuena !! has ganado "<< endl;
+    }else{
+        cout <<" Mala suerte" << endl;
+    }
     
     return 0;
 }
