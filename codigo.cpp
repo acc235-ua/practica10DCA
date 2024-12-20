@@ -28,7 +28,7 @@ int main() {
 
         cout<< "Enhorabuena !! has ganado "<< endl;
     }else{
-        cout <<" Mala suerte" << endl;
+        cout <<" Mala suerte, estaba pensando en" <<aleatorio << endl;
     }
     
     return 0;
