@@ -40,6 +40,7 @@ int main() {
             
         }
     }
-    
+
+    cout <<" Adiós "<<nombre<<endl; 
     return 0;
 }
