@@ -6,7 +6,7 @@ RESPUESTAS:
 1. Se ha creado un proyecto git vincuado a mi cuenta.
 
 
-2. Creación de alias:
+2. Creación de alias:     #################################################################################################################################################
 
 Se han creado dos alias, uno global y otro local, acontinuación se muestran los comandos escritos para hacerlo:
 
@@ -25,7 +25,7 @@ vboxalvaro@Ubuntu-Personal:~/Escritorio/DCA/PRAC9$
 
 
 
-3. Se han creado 3 nuevas ramas:
+3. Se han creado 3 nuevas ramas:  #########################################################################################################################################
 
  rama-1 que parte de main
  rama-2 que parte de main también.
@@ -34,7 +34,7 @@ vboxalvaro@Ubuntu-Personal:~/Escritorio/DCA/PRAC9$
  Se ha trabajado en el siguiente punto en rama-3.
  
  
-4. USO DE GIT BISECT
+4. USO DE GIT BISECT    #####################################################################################################################################################
 
 Se han creado 8 commits en rama-3 para probar la herramienta git bisect, el commit de error es el cuarto de los 8 commits que se han creado,(es decir tiene 4 mal commits delante y 3 commits sin errores antes).
  
@@ -80,9 +80,27 @@ Tras esto git bisect es capaz de detectar que el primer commit que presenta fall
 
 
 
-5. USO DE HOOK.
+5. USO DE HOOK.   #####################################################################################################################################################
 
-Se realizará un hook para comprobar los commits 
+Se realizará un hook para comprobar los commits:
+
+Se ha creado un hook llamado commit-msg , que comprueba los mensajes que se escriben al hacer el comando git commit.
+El objetivo sería comprobar que se sigue un formato concreto con los mensajes de los commits, aquí simplemente se ha realizado el código para que compruebe si el mensaje
+empieza por "COMMIT" , si no empieza por commit impide que se haga el commit 
+
+
+Ejemplo:
+
+vboxalvaro@Ubuntu-Personal:~/Escritorio/DCA/PRAC9$ git commit -m "prueba"
+Error: El mensaje del commit debe comenzar con 'COMMIT:'
+vboxalvaro@Ubuntu-Personal:~/Escritorio/DCA/PRAC9$ git commit -m "COMMIT:prueba"Todo bien con el mensaje del commit. ¡Commit permitido!
+[rama-3 56a97c4] COMMIT:prueba
+ 1 file changed, 4 insertions(+)
+vboxalvaro@Ubuntu-Personal:~/Escritorio/DCA/PRAC9$ 
+
+
+
+
 
 
 

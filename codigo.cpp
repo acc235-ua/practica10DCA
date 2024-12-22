@@ -22,15 +22,12 @@ int main() {
            // exit(0);
         }
     }
-
-
-
-
     cout << "Hola, " << nombre << endl;
+    
+    
     while( continua == "si"){
         cout<<"Pensaré un número del 1 al 20 ,intenta adivinarlo"<< nombre << endl <<" Número: ";
         cin >> num;
-
         if ( num == aleatorio){
 
             cout<< "Enhorabuena !! has ganado "<< endl;
@@ -40,9 +37,7 @@ int main() {
             do{
                 cout << "¿ Volverlo a intentar ? (si/no)" << endl;
                 cin >> continua ;
-            }while( (continua != "si") || (continua != "no" ));
-
-            
+            }while( (continua != "si") || (continua != "no" ));            
         }
     }
 
