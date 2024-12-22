@@ -16,11 +16,15 @@ int main() {
         cout << "Hola, dime tu nombre" << endl;
         cin >> nombre;
                 
+                
         if ( (nombre.length() == 1) || (nombre.length() == 2) ){
             cout << "err: bad name"<<endl;
            // exit(0);
         }
     }
+
+
+
 
     cout << "Hola, " << nombre << endl;
     while( continua == "si"){
