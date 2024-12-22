@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>   
+#include <ctime>
 using namespace std;
 
 int main() {
@@ -8,7 +9,7 @@ int main() {
     int aleatorio = 0;
     string continua = "si"; 
 
-    rand(tine(0));
+    srand(time(0));
     aleatorio = (rand() % 20) + 1 ;
 
     while( (nombre.length() == 1) || (nombre.length() == 2) || (nombre.length() == 0) ){
@@ -23,7 +24,7 @@ int main() {
 
     cout << "Hola, " << nombre << endl;
     while( continua == "si"){
-        cout<<"Pensaré un número del 1 al 20 ,intenta adivinarlo"<< nombre << endl << Número: ;
+        cout<<"Pensaré un número del 1 al 20 ,intenta adivinarlo"<< nombre << endl <<" Número: ";
         cin >> num;
 
         if ( num == aleatorio){
