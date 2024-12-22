@@ -86,16 +86,22 @@ Se realizará un hook para comprobar los commits:
 
 Se ha creado un hook llamado commit-msg , que comprueba los mensajes que se escriben al hacer el comando git commit.
 El objetivo sería comprobar que se sigue un formato concreto con los mensajes de los commits, aquí simplemente se ha realizado el código para que compruebe si el mensaje
-empieza por "COMMIT" , si no empieza por commit impide que se haga el commit 
+empieza por "COMMIT" , si no empieza por commit impide que se haga el commit. 
+
+El código se puede comprobar en .git/hooks/commit-mssg
 
 
 Ejemplo:
 
+
+
+vboxalvaro@Ubuntu-Personal:~/Escritorio/DCA/PRAC9$ git add .
 vboxalvaro@Ubuntu-Personal:~/Escritorio/DCA/PRAC9$ git commit -m "prueba"
 Error: El mensaje del commit debe comenzar con 'COMMIT:'
-vboxalvaro@Ubuntu-Personal:~/Escritorio/DCA/PRAC9$ git commit -m "COMMIT:prueba"Todo bien con el mensaje del commit. ¡Commit permitido!
-[rama-3 56a97c4] COMMIT:prueba
- 1 file changed, 4 insertions(+)
+vboxalvaro@Ubuntu-Personal:~/Escritorio/DCA/PRAC9$ git commit -m "COMMIT: prueba"
+Commit correcto
+[rama-3 b05efe5] COMMIT: prueba
+ 2 files changed, 26 insertions(+), 13 deletions(-)
 vboxalvaro@Ubuntu-Personal:~/Escritorio/DCA/PRAC9$ 
 
 
