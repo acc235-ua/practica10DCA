@@ -1,3 +1,17 @@
+
+
+
+RESPUESTAS:
+
+1. Se ha creado un proyecto git vincuado a mi cuenta.
+
+
+2. Creación de alias:
+
+Se han creado dos alias, uno global y otro local, acontinuación se muestran los comandos escritos para hacerlo:
+
+
+
 vboxalvaro@Ubuntu-Personal:~/Escritorio/DCA/PRAC9$ git config --global alias.st status
 vboxalvaro@Ubuntu-Personal:~/Escritorio/DCA/PRAC9$ git st
 En la rama main
@@ -8,4 +22,70 @@ vboxalvaro@Ubuntu-Personal:~/Escritorio/DCA/PRAC9$ git config alias.co checkout
 vboxalvaro@Ubuntu-Personal:~/Escritorio/DCA/PRAC9$ git co
 Tu rama está actualizada con 'origin/main'.
 vboxalvaro@Ubuntu-Personal:~/Escritorio/DCA/PRAC9$ 
+
+
+
+3. Se han creado 3 nuevas ramas:
+
+ rama-1 que parte de main
+ rama-2 que parte de main también.
+ rama-3 que parte desde rama-1.
+ 
+ Se ha trabajado en el siguiente punto en rama-3.
+ 
+ 
+4. USO DE GIT BISECT
+
+Se han creado 8 commits en rama-3 para probar la herramienta git bisect, el commit de error es el cuarto de los 8 commits que se han creado,(es decir tiene 4 mal commits delante y 3 commits sin errores antes).
+ 
+ A continuación se muestran los comandos realizados:
+ 
+ ACLARACIÓN: 4e69d9b es el hash del primer commit de la rama, se obtuvo con git log --oneline
+ 
+ 
+ vboxalvaro@Ubuntu-Personal:~/Escritorio/DCA/PRAC9$ git bisect start
+vboxalvaro@Ubuntu-Personal:~/Escritorio/DCA/PRAC9$ git bisect bad
+vboxalvaro@Ubuntu-Personal:~/Escritorio/DCA/PRAC9$ git bisect good 4e69d9b
+Biseccionando: faltan 3 revisiones por probar después de esta (aproximadamente 2 pasos)
+[784419e2fc37a604fcd47b806a5abb1c45ffe59f] commit con errores
+vboxalvaro@Ubuntu-Personal:~/Escritorio/DCA/PRAC9$ git bisect bad
+Biseccionando: faltan 0 revisiones por probar después de esta (aproximadamente 1 paso)
+[e31c0c81b30fb248a930a7974c1f1f4ea9612b28] mejoras en corrección
+vboxalvaro@Ubuntu-Personal:~/Escritorio/DCA/PRAC9$ git bisect good
+784419e2fc37a604fcd47b806a5abb1c45ffe59f is the first bad commit
+commit 784419e2fc37a604fcd47b806a5abb1c45ffe59f
+Author: acc235-ua <acc235@alu.ua.es>
+Date:   Fri Dec 20 12:49:45 2024 +0100
+
+    commit con errores
+
+ codigo.cpp | 7 +++++++
+ 1 file changed, 7 insertions(+)
+vboxalvaro@Ubuntu-Personal:~/Escritorio/DCA/PRAC9$ git bisect reset
+La posición previa de HEAD era e31c0c8 mejoras en corrección
+Cambiado a rama 'rama-3'
+Tu rama está actualizada con 'origin/rama-3'.
+
+
+
+
+
+
+
+Como se puede leer en los comandos, tras marcar el commit actual y el inicial, va al del medio "commit con errores", el cual es el primero con los errores
+Tras marcarlo como bad pasa a "mejoras en corrección" , el cual era correcto , se marca como good.
+
+Tras esto git bisect es capaz de detectar que el primer commit que presenta fallos es "commit con errores".
+
+
+
+
+5. USO DE HOOK.
+
+Se realizará un hook para comprobar los commits 
+
+
+
+
+ 
 
