@@ -3,7 +3,7 @@
 
 RESPUESTAS:
 
-1. Se ha creado un proyecto git vincuado a mi cuenta.
+1. Se ha creado un proyecto git público vincuado a mi cuenta de github: acc235-ua 
 
 
 2. Creación de alias:     #################################################################################################################################################
